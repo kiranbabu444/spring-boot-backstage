@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spring-boot-backstage
+  description: A simple Spring Boot service for Backstage
+  annotations:
+    github.com/project-slug: your-org/spring-boot-backstage
+spec:
+  type: service
+  lifecycle: experimental
+  owner: your-team
