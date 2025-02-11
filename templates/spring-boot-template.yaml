@@ -25,7 +25,7 @@ spec:
       input:
         allowedHosts: ['github.com']
         description: "Generated Spring Boot service from Backstage template"
-        repoUrl: github.com/kiranbabu444/{{ parameters.component_id }}
+        repoUrl: github.com/kiranbabu444/MySpringBootApp
         defaultBranch: main
         visibility: public
 
