@@ -5,7 +5,7 @@ metadata:
   title: Spring Boot Microservice
   description: A template for creating a Spring Boot service with Backstage
 spec:
-  owner: your-team
+  owner: guests
   type: service
 
   parameters:
@@ -23,7 +23,7 @@ spec:
       name: Fetch Template
       action: fetch:template
       input:
-        url: https://github.com/your-org/spring-boot-backstage-template
+        url: https://github.com/kiranbabu444/spring-boot-backstage-template
         targetPath: ./{{ parameters.component_id }}
         values:
           name: {{ parameters.component_id }}
@@ -34,13 +34,13 @@ spec:
       input:
         allowedHosts: ['github.com']
         description: "Generated Spring Boot service from Backstage template"
-        repoUrl: github.com/your-org/{{ parameters.component_id }}
+        repoUrl: github.com/kiranbabu444/{{ parameters.component_id }}
         defaultBranch: main
         visibility: public
 
   output:
     links:
       - title: Repository
-        url: https://github.com/your-org/{{ parameters.component_id }}
+        url: https://github.com/kiranbabu444/{{ parameters.component_id }}
       - title: Open in Backstage
         url: /catalog/default/component/{{ parameters.component_id }}
