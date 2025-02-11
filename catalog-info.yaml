@@ -1,11 +1,10 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Location
 metadata:
   name: spring-boot-backstage
   description: A simple Spring Boot service for Backstage
   annotations:
-    github.com/project-slug: your-org/spring-boot-backstage
+    github.com/project-slug: kiranbabu444/spring-boot-backstage
 spec:
-  type: service
-  lifecycle: experimental
-  owner: guests
+  targets: 
+    - ./templates/spring-boot-template.yaml
