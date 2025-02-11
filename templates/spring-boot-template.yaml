@@ -1,0 +1,46 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: spring-boot-template
+  title: Spring Boot Microservice
+  description: A template for creating a Spring Boot service with Backstage
+spec:
+  owner: your-team
+  type: service
+
+  parameters:
+    - title: Enter project details
+      required: [component_id]
+      properties:
+        component_id:
+          title: Service Name
+          type: string
+          description: Name of the Spring Boot service
+          ui:autofocus: true
+
+  steps:
+    - id: fetch-template
+      name: Fetch Template
+      action: fetch:template
+      input:
+        url: https://github.com/your-org/spring-boot-backstage-template
+        targetPath: ./{{ parameters.component_id }}
+        values:
+          name: {{ parameters.component_id }}
+
+    - id: publish
+      name: Publish to GitHub
+      action: publish:github
+      input:
+        allowedHosts: ['github.com']
+        description: "Generated Spring Boot service from Backstage template"
+        repoUrl: github.com/your-org/{{ parameters.component_id }}
+        defaultBranch: main
+        visibility: public
+
+  output:
+    links:
+      - title: Repository
+        url: https://github.com/your-org/{{ parameters.component_id }}
+      - title: Open in Backstage
+        url: /catalog/default/component/{{ parameters.component_id }}
