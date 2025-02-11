@@ -19,15 +19,6 @@ spec:
           ui:autofocus: true
 
   steps:
-    - id: fetch-template
-      name: Fetch Template
-      action: fetch:template
-      input:
-        url: https://github.com/kiranbabu444/spring-boot-backstage-template
-        targetPath: ./{{ parameters.component_id }}
-        values:
-          name: {{ parameters.component_id }}
-
     - id: publish
       name: Publish to GitHub
       action: publish:github
