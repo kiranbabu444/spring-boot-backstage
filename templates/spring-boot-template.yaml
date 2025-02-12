@@ -19,6 +19,11 @@ spec:
           ui:autofocus: true
 
   steps:
+    - id: fetch-template
+      name: Fetch Template
+      action: fetch:template
+      input:
+        url: ./
     - id: publish
       name: Publish to GitHub
       action: publish:github
