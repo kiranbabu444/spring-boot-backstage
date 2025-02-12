@@ -31,7 +31,7 @@ spec:
         allowedHosts: ['github.com']
         description: "Generated Spring Boot service from Backstage template"
         #repoUrl: github.com/kiranbabu444/{{ parameters.component_id }}
-        repoUrl: github.com?repo=MySpringBootApp&owner=kiranbabu444
+        repoUrl: github.com?repo={{ parameters.component_id }}&owner=kiranbabu444
         defaultBranch: main
         visibility: public
 
