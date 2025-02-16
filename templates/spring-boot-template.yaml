@@ -26,7 +26,7 @@ spec:
       input:
         url: ../code-content
         values:
-          component_id: ${{ parameters.component_id }}
+          componentId: ${{ parameters.component_id }}
     - id: publish
       name: Publish to GitHub
       action: publish:github
