@@ -1,0 +1,44 @@
+class Config {
+    static def ENVIRONMENTS = [
+
+    ]
+}
+
+pipeline {
+    environment {
+    }
+
+    stages {
+        stage('Initiialize docker info') { steps { script { managed(this) {
+
+        } } } }
+
+        stage('Pull Docker Image') { steps { script { managed(this) {
+
+        } } } }
+
+        stage('Deploy') { steps { script { managed(this) {
+
+        } } } }
+
+        stage('Chain Deploy') { steps { script { managedIf(this, env.CHAIN_ENV && env.CHAIN_ENV != 'NONE') {
+
+        } } } }
+    }
+
+    post {
+        always { script {
+            if(fileExists('deployment.yml')) {
+                archiveArtifacts artifacts: "deployment.yml"
+            }
+        } }
+
+        success { script {
+             sendEmail(this, env.DEPLOY_SUCCESS)
+        } }
+
+        failure {
+         echo 'I failed :( in jenkins_deploy'
+        }
+    }
+}
