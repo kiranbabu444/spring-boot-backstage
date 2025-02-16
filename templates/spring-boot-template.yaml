@@ -21,10 +21,10 @@ spec:
   steps:
     - id: fetch-template
       name: Fetch Template
-      action: fetch:template
+      action: fetch:plain
       input:
         url: https://github.com/kiranbabu444/spring-boot-backstage
-        sourcePath: content
+        targetPath: content
         filterPaths: 
           - content/**
     - id: publish
