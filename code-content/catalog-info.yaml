@@ -3,12 +3,10 @@ kind: Component
 metadata:
   name: ${{values.componentId | dump}}
   {%- if values.description %}
+  description: ${{values.description | dump}}
+  {%- endif %}
   annotations:
     backstage.io/techdocs-ref: dir:.
-  tags:
-    - SpringBoot
-    - Jenkins
-    - Maven
 spec:
   type: service
   lifecycle: experimental
