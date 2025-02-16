@@ -10,7 +10,8 @@ spec:
 
   parameters:
     - title: Enter project details
-      required: [component_id]
+      required: 
+        - component_id
       properties:
         component_id:
           title: Service Name
