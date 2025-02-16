@@ -6,8 +6,8 @@ metadata:
   description: ${{values.description | dump}}
   {%- endif %}
   tags:
-    - test
-    - js
+    - spring
+    - mvn
     - demo
   annotations:
     backstage.io/techdocs-ref: dir:.
