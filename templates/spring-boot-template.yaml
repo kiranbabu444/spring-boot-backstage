@@ -25,7 +25,6 @@ spec:
       action: fetch:template
       input:
         url: ../code-content
-        templateFileExtensions: ['java']
         values:
           componentId: ${{ parameters.component_id }}
     - id: publish
