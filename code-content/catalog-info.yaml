@@ -3,8 +3,7 @@ kind: Component
 metadata:
   name: ${{values.componentId | dump}}
   {%- if values.description %}
-  description: |
-    A SpringBoot service generated with Backstage template
+  description: A SpringBoot service generated with Backstage template
   annotations:
     backstage.io/techdocs-ref: dir:.
   tags:
