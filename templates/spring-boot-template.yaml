@@ -24,7 +24,7 @@ spec:
       action: fetch:plain
       input:
         url: https://github.com/kiranbabu444/spring-boot-backstage
-        targetPath: content
+        sourcePath: content
     - id: publish
       name: Publish to GitHub
       action: publish:github
