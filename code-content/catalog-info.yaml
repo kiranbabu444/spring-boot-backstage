@@ -5,6 +5,10 @@ metadata:
   {%- if values.description %}
   description: ${{values.description | dump}}
   {%- endif %}
+  tags:
+    - SpringBoot
+    - Maven
+    - Jenkins
   annotations:
     backstage.io/techdocs-ref: dir:.
 spec:
