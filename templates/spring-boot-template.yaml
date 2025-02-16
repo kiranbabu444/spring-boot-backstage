@@ -27,6 +27,9 @@ spec:
         url: ../code-content
         values:
           componentId: ${{ parameters.component_id }}
+      script:
+        - echo "Debug: component_id = ${{ parameters.component_id }}"   
+        - echo "Debug: componentId = ${{ values.componentId }}"   
     - id: publish
       name: Publish to GitHub
       action: publish:github
