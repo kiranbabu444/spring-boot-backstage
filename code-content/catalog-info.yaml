@@ -6,9 +6,9 @@ metadata:
   description: ${{values.description | dump}}
   {%- endif %}
   tags:
-    - SpringBoot
-    - Maven
-    - Jenkins
+    - test
+    - js
+    - demo
   annotations:
     backstage.io/techdocs-ref: dir:.
 spec:
